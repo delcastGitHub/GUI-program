@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane prefHeight="500.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="admin.AdminDriver">
+    <children>
+        <Pane layoutY="1.0" prefHeight="500.0" prefWidth="335.0">
+            <children>
+                <Label layoutX="29.0" layoutY="73.0" prefHeight="17.0" prefWidth="81.0" text="Name" />
+                <TextField fx:id="nameAdmin" layoutX="113.0" layoutY="68.0" prefHeight="27.0" prefWidth="204.0" />
+                <Label layoutX="29.0" layoutY="123.0" prefHeight="17.0" prefWidth="81.0" text="Last Name" />
+                <TextField fx:id="lastNameAdmin" layoutX="113.0" layoutY="118.0" prefHeight="27.0" prefWidth="204.0" />
+                <TextArea fx:id="resultConsole" layoutX="31.0" layoutY="374.0" prefHeight="88.0" prefWidth="288.0" />
+                <Label layoutX="31.0" layoutY="340.0" prefHeight="17.0" prefWidth="106.0" text="Result Console" />
+                <Label layoutX="29.0" layoutY="219.0" prefHeight="17.0" prefWidth="81.0" text="P. Number" />
+                <TextField fx:id="phoneAdmin" layoutX="113.0" layoutY="214.0" prefHeight="27.0" prefWidth="204.0" />
+                <Label layoutX="29.0" layoutY="171.0" prefHeight="17.0" prefWidth="81.0" text="Email" />
+                <TextField fx:id="emailAdmin" layoutX="113.0" layoutY="166.0" prefHeight="27.0" prefWidth="204.0" />
+                <Button fx:id="addClient" layoutX="29.0" layoutY="263.0" mnemonicParsing="false" onAction="#addClient" prefHeight="27.0" prefWidth="288.0" text="Add Client" />
+            <Button fx:id="clearForm" layoutX="30.0" layoutY="301.0" mnemonicParsing="false" onAction="#clearForm" prefHeight="27.0" prefWidth="288.0" text="Clear Form" />
+            </children>
+            <opaqueInsets>
+                <Insets right="10.0" />
+            </opaqueInsets>
+        </Pane>
+        <HBox layoutX="320.0" layoutY="215.0" prefHeight="290.0" prefWidth="583.0">
+            <children>
+                <TableView fx:id="clientTable" prefHeight="290.0" prefWidth="580.0">
+                    <columns>
+                        <TableColumn fx:id="idColumn" prefWidth="50.0" text="ID" />
+                        <TableColumn fx:id="nameColumn" prefWidth="126.0" text="Name" />
+                        <TableColumn fx:id="lastNameColumn" prefWidth="115.0" text="Last Name" />
+                        <TableColumn fx:id="phoneColumn" prefWidth="112.0" text="Phone Number" />
+                        <TableColumn fx:id="emailColumn" prefWidth="176.0" text="Email" />
+                    </columns>
+                </TableView>
+            </children>
+        </HBox>
+        <Pane layoutX="320.0" layoutY="1.0" prefHeight="215.0" prefWidth="583.0">
+            <children>
+                <Label layoutX="364.0" layoutY="26.0" text="DB status" />
+                <Label fx:id="dbstatus" layoutX="441.0" layoutY="25.0" prefHeight="18.0" prefWidth="116.0" />
+                <Button fx:id="delete" layoutX="278.0" layoutY="148.0" mnemonicParsing="false" text="Delete" />
+                <Label layoutX="69.0" layoutY="72.0" prefHeight="17.0" prefWidth="72.0" text="Client ID" />
+                <TextField fx:id="clientID" layoutX="22.0" layoutY="94.0" />
+                <Label layoutX="222.0" layoutY="72.0" prefHeight="17.0" prefWidth="133.0" text="New Phone Number" />
+                <TextField fx:id="newPhone" layoutX="213.0" layoutY="94.0" prefHeight="27.0" prefWidth="151.0" />
+                <Label contentDisplay="CENTER" layoutX="420.0" layoutY="72.0" prefHeight="17.0" prefWidth="72.0" text="New Email" />
+                <TextField fx:id="newEmail" layoutX="380.0" layoutY="94.0" prefHeight="27.0" prefWidth="151.0" />
+                <Button fx:id="search" layoutX="78.0" layoutY="148.0" mnemonicParsing="false" onAction="#searchClient" text="Search" />
+                <Button fx:id="update" layoutX="176.0" layoutY="148.0" mnemonicParsing="false" text="Update" />
+                <Button fx:id="searchAll" layoutX="377.0" layoutY="148.0" mnemonicParsing="false" onAction="#loadClientData" text="Search all clients" />
+            </children>
+        </Pane>
+      <Label layoutX="29.0" layoutY="24.0" prefHeight="17.0" prefWidth="81.0" text="ID" />
+      <TextField fx:id="idAdmin" layoutX="113.0" layoutY="19.0" prefHeight="27.0" prefWidth="204.0" />
+    </children>
+
+
+
+
+
+
+
+</AnchorPane>
